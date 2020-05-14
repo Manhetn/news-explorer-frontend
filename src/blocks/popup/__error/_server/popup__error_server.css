@@ -1,0 +1,7 @@
+.popup__error_server {
+  z-index: 10;
+  display: block;
+  text-align: center;
+  margin-bottom: 7px;
+  visibility: hidden;
+}

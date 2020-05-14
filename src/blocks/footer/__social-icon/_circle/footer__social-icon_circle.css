@@ -1,0 +1,15 @@
+.footer__social-icon_circle {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .footer__social-icon_circle {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .footer__social-icon_circle {
+    display: none;
+  }
+}

@@ -1,0 +1,10 @@
+.popup__error_invalid-input {
+  display: none;
+  margin-bottom: 12px;
+}
+
+@media screen and (max-width: 523px) {
+  .popup__error_invalid-input:last-of-type  {
+    margin-bottom: 4px;
+  }
+}

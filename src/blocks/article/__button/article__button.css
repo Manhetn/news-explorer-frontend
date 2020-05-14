@@ -1,0 +1,17 @@
+.article__button {
+  width: 40px;
+  height: 40px;
+  padding: 0px;
+  margin-left: 5px;
+  border-radius: 8px;
+  border: none;
+  background-color: #ffffff;
+  outline: none;
+  cursor: pointer;
+  order: 1;
+  overflow: hidden;
+}
+
+.article__button:hover ~ .article__tooltip { 
+  display: block;
+}

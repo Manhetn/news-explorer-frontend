@@ -1,0 +1,5 @@
+@media screen and (max-width: 767px){
+  .footer__list-item:first-child {
+    margin-bottom: calc( (100vw - 320px)/(768 - 320) * (14 - 24) + 24px);
+  }
+}

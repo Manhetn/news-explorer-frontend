@@ -1,0 +1,9 @@
+.header__link_light {
+  color: #B6BCBF;
+}
+
+@media screen and (max-width: 767px) {
+  .header__link_light {
+    color: #ffffff;
+  }
+}

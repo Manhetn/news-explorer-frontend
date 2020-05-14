@@ -1,0 +1,11 @@
+.popup__input_type_any {
+  padding-top: 8px;
+  padding-bottom: 6px;
+  margin-bottom: 31px;
+}
+
+@media screen and (max-width: 523px) {
+  .popup__input_type_any{
+    margin-bottom: 30px;
+  }
+}

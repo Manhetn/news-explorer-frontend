@@ -1,0 +1,52 @@
+@import url(./_type/_any/popup__input_type_any.css);
+@import url(./_type/_password/popup__input_type_password.css);
+
+.popup__input {
+  width: 99.8%;
+  padding-right: 2px;
+  padding-left: 0px;
+  /* margin-bottom: 31px; */
+  background: #ffffff;
+  border: none;
+  border-bottom: 1px solid #cccccc;
+  outline: none;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000; 
+}
+
+.popup__input:focus {
+  border-bottom: 1px solid #000000;
+}
+
+.popup__input:invalid:not(:placeholder-shown) + .popup__error {
+  display: block;
+}
+
+.popup__input:last-of-type {
+  margin-bottom: 17px;
+}
+
+.popup__input:invalid:not(:placeholder-shown){
+  margin-bottom: 3px;
+}   
+
+.popup__input:invalid:not(:placeholder-shown) ~ .popup__button {
+  margin-top: 11px;
+  width: 100.5%;
+  margin-left: -1px;
+} 
+
+.popup__input::-moz-placeholder { color: #cccccc; }
+.popup__input::-webkit-input-placeholder { color:#cccccc; } 
+
+
+@media screen and (max-width: 523px) {
+  .popup__input:last-of-type {
+    margin-bottom: 1px;
+  
+  }
+  .popup__input:invalid:not(:placeholder-shown) ~ .popup__button {
+    margin-top: 0px;
+  }   
+}

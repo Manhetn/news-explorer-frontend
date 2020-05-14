@@ -1,0 +1,11 @@
+.article__icone-button_type_bookmark_light {
+  display: block;
+}
+
+.article__icone-button_type_bookmark_light:hover {
+  display: none;
+}
+
+.article__icone-button_type_bookmark_light:hover ~ .article__icone-button_type_bookmark_dark { 
+  display: block;
+}

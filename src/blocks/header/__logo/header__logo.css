@@ -1,0 +1,30 @@
+@import url(./_light/header__logo_light.css);
+@import url(./_dark/header__logo_dark.css);
+
+.header__logo {
+    padding-top: 30px;
+    padding-left: 104px;
+    display: block;
+    text-decoration: none;
+    font-family: 'Roboto Slab', Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    z-index: 5;
+}
+
+@media screen and (max-width: 1440px) {
+  .header__logo  {
+    padding-top: calc( (100vw - 768px)/(1439 - 768) * (30 - 22) + 22px);
+    padding-left: calc( (100vw - 768px)/(1439 - 768) * (104 - 40) + 40px);
+    
+  }
+}
+@media screen and (max-width: 768px) {
+  .header__logo  {
+    padding-top: calc( (100vw - 320px)/(768 - 320) * (22 - 16) + 16px);
+    padding-left: calc( (100vw - 320px)/(768 - 320) * (40 - 16) + 16px);
+    font-size: calc( (100vw - 320px)/(768 - 320) * (20 - 16) + 16px);
+  }
+}

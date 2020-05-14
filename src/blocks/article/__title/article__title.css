@@ -1,0 +1,41 @@
+.article__title {
+  margin-top: 12px;
+  margin-bottom: 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-family: 'Roboto Slab', Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 30px;
+  color: #1A1B22;
+}
+
+@media screen and (max-width: 1440px) {
+  .article__title {
+    margin-top: calc( (100vw - 768px)/(1440 - 768) * (12 - 13) + 13px);
+    margin-bottom: calc( (100vw - 768px)/(1440 - 768) * (16 - 9) + 9px);
+    font-size: calc( (100vw - 768px)/(1440 - 768) * (26 - 22) + 22px);
+    line-height: calc( (100vw - 768px)/(1440 - 768) * (30 - 24) + 24px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .article__title {
+    margin-top: calc( (100vw - 495px)/(767 - 495) * (11 - 13) + 13px);
+    margin-bottom: 9px;
+    font-size: 22px;
+    line-height: calc( (100vw - 495px)/(767 - 495) * (26 - 24) + 24px);
+  }
+}
+
+@media screen and (max-width: 495px) {
+  .article__title {
+    font-size: 22px;
+    line-height: 26px;
+    margin-top: 11px;
+    -webkit-line-clamp: 2;
+  }
+}

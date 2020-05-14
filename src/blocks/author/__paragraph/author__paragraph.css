@@ -1,0 +1,18 @@
+.author__paragraph {
+  margin-top: 0px;
+  margin-bottom: 24px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+@media screen and (max-width: 1440px) {
+  .author__paragraph {
+    margin-top: calc( (100vw - 768px)/(1440 - 768) * (0 - 9) + 9px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .author__paragraph {
+    margin-top: 15px;    
+  }
+}

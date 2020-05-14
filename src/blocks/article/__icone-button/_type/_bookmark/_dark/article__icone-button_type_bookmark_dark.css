@@ -1,0 +1,7 @@
+.article__icone-button_type_bookmark_dark {
+  display: none;
+}
+
+.article__icone-button_type_bookmark_dark:hover {
+  display: block;
+}

@@ -1,0 +1,12 @@
+.header__button_type_menu_open {
+  margin-top: calc( (100vw - 320px)/(767 - 320) * (13 - 5) + 5px);
+  margin-right: calc( (100vw - 320px)/(768 - 320) * (40 - 16) + 16px);
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .header__button_type_menu_open {
+    display: block;
+  }
+}
+

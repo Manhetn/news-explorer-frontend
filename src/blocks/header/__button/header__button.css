@@ -1,0 +1,38 @@
+@import url(./_color/_white/header__button_color_white.css);
+@import url(./_color/_dark/header__button_color_dark.css);
+@import url(./_type/_login/header__button_type_login.css);
+@import url(./_type/_logout/header__button_type_logout.css);
+@import url(./_type/_menu/header__button_type_menu.css);
+
+.header__button {
+  height: 48px;
+  margin-left: 33px;
+  border: 1px solid;
+  background: none;
+  position: relative;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.header__button:disabled {
+  display: none;
+}
+
+@media screen and (max-width: 1440px) {
+  .header__button  {
+    height: calc( (100vw - 768px)/(1440 - 768) * (48 - 40) + 40px);
+    margin-left: calc( (100vw - 768px)/(1440 - 768) * (33 - 18) + 18px);
+    font-size: calc( (100vw - 768px)/(1440 - 768) * (18 - 16) + 16px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header__button  {
+    width: 288px;
+    height: 56px;
+    margin-top: 38px;
+    margin-left: calc( (100vw - 320px)/(768 - 320) * (40 - 16) + 16px);
+    font-size: 18px;
+  }
+}
+

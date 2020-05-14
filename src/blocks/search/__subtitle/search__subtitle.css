@@ -1,0 +1,33 @@
+@import url(./_visible/search__subtitle_visible.css);
+@import url(./_hidden/search__subtitle_hidden.css);
+
+.search__subtitle {
+  width: 545px;
+  height: 72px;
+  margin-bottom: 40px;
+  box-sizing: content-box;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+
+@media screen and (max-width: 1440px) {
+  .search__subtitle {
+    width: calc( (100vw - 768px)/(1440 - 768) * (545 - 415) + 415px);
+    height: calc( (100vw - 628px)/(1440 - 628) * (72 - 96) + 96px);
+    padding-left: 1px;
+    margin-bottom: calc( (100vw - 768px)/(1440 - 768) * (40 - 4) + 4px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .search__subtitle {
+    width: calc( (100vw - 320px)/(767 - 320) * (368 - 290) + 290px);
+    height: 96px;
+    padding-left: 0px;
+    margin-bottom: calc( (100vw - 320px)/(768 - 320) * (0 - 98) + 98px);
+  }
+}

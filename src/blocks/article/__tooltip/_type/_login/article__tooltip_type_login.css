@@ -1,0 +1,30 @@
+.article__tooltip_type_login {
+  width: 182px;
+  padding-top: 14px;
+  padding-left: 12px;
+  padding-right: 8px;
+  margin-left: 10px;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+@media screen and (max-width: 903px) {
+  .article__tooltip_type_login {
+    margin-top: 5px;
+    order: 2;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .article__tooltip_type_login {
+    margin-left: calc( (100vw - 495px)/(767 - 496) * (50 - 1) + 1px);
+  }
+}
+
+@media screen and (max-width: 495px) {
+  .article__tooltip_type_login {
+    margin-left: calc( (100vw - 320px)/(495 - 320) * (60 - 50) + 50px);
+  }
+}
+
+

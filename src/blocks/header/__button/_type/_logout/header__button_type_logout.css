@@ -1,0 +1,18 @@
+.header__button_type_logout {
+  padding: 3px 45px 3px 18px; 
+  background-color: violet;
+}
+
+
+@media screen and (max-width: 1440px) {
+  .header__button_type_logout  {
+    padding-right: calc( (100vw - 768px)/(1440 - 768) * (45 - 42) + 42px);
+    padding-left: calc( (100vw - 768px)/(1440 - 768) * (18 - 14) + 14px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header__button_type_logout  {
+    padding: 1px 43px 3px 13px; 
+  }
+}

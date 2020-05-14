@@ -1,0 +1,27 @@
+.author__title {
+  margin-top: 52px;
+  margin-bottom: 23px;
+  font-family: 'Roboto Slab', Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 46px;
+}
+
+@media screen and (max-width: 1440px) {
+  .author__title  {
+    margin-top: calc( (100vw - 768px)/(1440 - 768) * (52 - 41) + 41px);
+    margin-bottom: calc( (100vw - 768px)/(1440 - 768) * (23 - 8) + 8px);
+    font-size: calc( (100vw - 768px)/(1440 - 768) * (40 - 30) + 30px);
+    line-height: calc( (100vw - 768px)/(1440 - 768) * (46 - 40) + 40px);
+  }
+}
+
+@media screen and (max-width: 761px) {
+  .author__title  {
+    margin-top: 21px;
+    margin-bottom: 15px;
+    font-size: 30px;
+    line-height: 40px;
+  }
+}

@@ -1,0 +1,50 @@
+@import url(./__container/header__container.css);
+@import url(./__link/header__link.css);
+@import url(./__logo/header__logo.css);
+@import url(./__header__button-menu/header__button-menu.css);
+@import url(./__menu/header__menu.css);
+@import url(./__button/header__button.css);
+@import url(./__button-logout/header__button-logout.css);
+@import url(./__button-login/header__button-login.css);
+@import url(./__icon-logout/header__icon-logout.css);
+@import url(./__list/header__list.css);
+@import url(./__list-iteam/header__list-iteam.css);
+@import url(./_shadow/_light/header_shadow_light.css);
+@import url(./_shadow/_darker/header_shadow_darker.css);
+
+.header {
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 3;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+@media screen and (max-width: 1440px) {
+  .header {
+    height: calc( (100vw - 768px)/(1440 - 768) * (80 - 66) + 66px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    height: 56px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header {
+    height: 56px;
+  }
+}

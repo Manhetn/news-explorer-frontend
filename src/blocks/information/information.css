@@ -1,0 +1,31 @@
+@import url(./__title/information__title.css);
+@import url(./__article-counter/information__article-counter.css);
+@import url(./__detals/information__detals.css);
+
+.information {
+  width: 100%;
+  margin: 0px;
+  padding-top: 105px;
+  padding-bottom: 38px;
+  padding-left: 104px;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1440px) {
+  .information {
+    padding-left: calc( (100vw - 768px)/(1440 - 768) * (104 - 40) + 40px);
+    padding-bottom: calc( (100vw - 768px)/(1440 - 768) * (38 - 18) + 18px);
+    padding-top: calc( (100vw - 768px)/(1440 - 768) * (105 - 75) + 75px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .information {
+    padding-top: calc( (100vw - 320px)/(767 - 320) * (75 - 55) + 55px);
+    padding-bottom: calc( (100vw - 768px)/(1439 - 768) * (18 - 14) + 14px);
+    padding-left: calc( (100vw - 320px)/(767 - 320) * (30 - 0) + 0px); 
+  }
+}

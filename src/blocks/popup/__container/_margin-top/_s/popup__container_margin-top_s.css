@@ -1,0 +1,5 @@
+.popup__container_margin-top_s {
+  margin-top: 19px;
+  margin-top: 1px;
+  margin-top: calc( (100vw - 768px)/(1440 - 768) * (19 - 1) + 1px);
+}

@@ -1,0 +1,16 @@
+.preloader__circle {
+  display: block;
+  width: 72px;
+  height: 72px;
+  border: 2px solid #444;
+  border-bottom-color: #888;
+  opacity: 0.3;
+  border-radius: 50%;
+  animation: spin .75s infinite linear;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}

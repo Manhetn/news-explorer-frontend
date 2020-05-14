@@ -1,0 +1,26 @@
+.article__image {
+  width: 100%;
+  height: 272px;
+  margin-bottom: 16px;
+}
+
+@media screen and (max-width: 1440px) {
+  .article__image {
+    height: calc( (100vw - 768px)/(1440 - 768) * (272 - 150) + 150px);
+    margin-bottom: calc( (100vw - 768px)/(1440 - 768) * (16 - 12) + 12px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .article__image {
+    height: calc( (100vw - 495px)/(767 - 495) * (196 - 150) + 150px);
+    margin-bottom: 12px;
+  }
+}
+
+@media screen and (max-width: 495px) {
+  .article__image {
+    height: 196px;
+    margin-bottom: 12px;
+  }
+}

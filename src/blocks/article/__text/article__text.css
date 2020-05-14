@@ -1,0 +1,26 @@
+.article__text {
+  margin: 0px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #1A1B22;
+}
+
+@media screen and (max-width: 767px) {
+  .article__text{
+    -webkit-line-clamp: 3;
+  }
+}
+
+
+@media screen and (max-width: 495px) {
+  .article__text{
+    -webkit-line-clamp: 4;
+  }
+}

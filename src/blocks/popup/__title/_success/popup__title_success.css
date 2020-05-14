@@ -1,0 +1,11 @@
+.popup__title_success {
+  margin-left: 36px;
+  margin-top: 43px;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 523px) {
+  .popup__title_success {
+    margin-left: 26px;
+  }
+}

@@ -1,0 +1,8 @@
+@import url(./_invalid-input/popup__error_invalid-input.css);
+@import url(./_server/popup__error_server.css);
+
+.popup__error {
+  color: #FF0000;
+  font-size: 12px;
+  line-height: 15px;
+}

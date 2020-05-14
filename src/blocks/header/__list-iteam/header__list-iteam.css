@@ -1,0 +1,19 @@
+@import url(./_border-top/_darker/header__list-iteam_border-top_darker.css);
+@import url(./_border-top/_light/header__list-iteam_border-top_light.css);
+
+.header__list-iteam {
+  padding-top: 19px;
+}
+
+@media screen and (max-width: 1440px) {
+  .header__list-iteam {
+    padding-top: calc( (100vw - 768px)/(1440 - 768) * (19 - 14) + 14px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header__list-iteam {
+    padding-top: 0px;
+  }
+ 
+}
