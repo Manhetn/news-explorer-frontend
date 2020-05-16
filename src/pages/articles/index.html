@@ -2,14 +2,24 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../../images/favicon.svg" sizes="any" type="image/svg+xml">
-    <!-- <link rel="stylesheet" href="./index.css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Ilya Shestakov" />
+    <link rel="icon" type="image/png" sizes="32x32" href="<%=require('../../images/favicon/favicon-32x32.png')%>" />
+    <link rel="icon" type="image/png" sizes="96x96" href="<%=require('../../images/favicon/favicon-96x96.png')%>" />
+    <link rel="icon" type="image/png" sizes="16x16" href="<%=require('../../images/favicon/favicon-16x16.png')%>" />
+    <link rel="apple-touch-icon" sizes="57x57" href="<%=require('../../images/favicon/apple-icon-57x57.png')%>" />
+    <link rel="apple-touch-icon" sizes="60x60" href="<%=require('../../images/favicon/apple-icon-60x60.png')%>" />
+    <link rel="apple-touch-icon" sizes="72x72" href="<%=require('../../images/favicon/apple-icon-72x72.png')%>" />
+    <link rel="apple-touch-icon" sizes="76x76" href="<%=require('../../images/favicon/apple-icon-76x76.png')%>" />
+    <link rel="apple-touch-icon" sizes="114x114" href="<%=require('../../images/favicon/apple-icon-114x114.png')%>" />
+    <link rel="apple-touch-icon" sizes="120x120" href="<%=require('../../images/favicon/apple-icon-120x120.png')%>" />
+    <link rel="apple-touch-icon" sizes="144x144" href="<%=require('../../images/favicon/apple-icon-144x144.png')%>" />
+    <link rel="apple-touch-icon" sizes="152x152" href="<%=require('../../images/favicon/apple-icon-152x152.png')%>" />
+    <link rel="apple-touch-icon" sizes="180x180" href="<%=require('../../images/favicon/apple-icon-180x180.png')%>" />
     <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.articles.css %>" />
-    <title>NewsExplorer</title>
+    <title>NewsExplorer |  Сохраненные статьи</title>
   </head>
   <body class="page">
-
     <header class="header header_shadow_darker">
       <div class="header__container">
         <a
@@ -29,7 +39,6 @@
             <rect x="4" y="14" width="16" height="2" fill="#1A1B22"/>
           </svg>
         </button>
-      <!--  header__menu_is-opened -->
         <nav class="header__menu">
           <button
             class="button header__button_type_menu header__button_type_menu_close"
@@ -52,7 +61,6 @@
               </a>
             </li>
             <li class="header__list-iteam">
-              <!-- header__link_hidden -->
               <a
                 class="header__link header__link_dark header__link_dark-acting"
                 href="#article"
@@ -88,7 +96,6 @@
           <strong class="information__other">другим</strong>
         </p>
       </section>
-      <!-- Articles -->
       <section class="articles articles_padding-bottom_m articles_is-opened">
         <div class="articles__list">
           <article class="article article_saved">
@@ -117,7 +124,6 @@
               <p class="article__source">Дзен</p>
             </a>
           </article>
-
           <article class="article article_saved">
             <div class="article__menu">
               <span class="article__keyword">Природа</span>
@@ -144,7 +150,6 @@
               <p class="article__source">Афиша</p>
             </a>
           </article>
-
           <article class="article article_saved">
             <div class="article__menu">
               <span class="article__keyword">Природа</span>
@@ -171,7 +176,6 @@
               <p class="article__source">Медиазона</p>
             </a>
           </article>
-
           <article class="article article_saved">
             <div class="article__menu">
               <span class="article__keyword">Природа</span>
@@ -198,7 +202,6 @@
               <p class="article__source">Дзен</p>
             </a>
           </article>
-
           <article class="article article_saved">
             <div class="article__menu">
               <span class="article__keyword">Природа</span>
