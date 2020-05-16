@@ -342,16 +342,14 @@
                 minlength="8"
                 required
               />
-              <span class="popup__error popup__error_invalid-input">
-                Пароль должен состоять минимум из 8 символов
-              </span>
+              <span class="popup__error popup__error_invalid-input">Пароль должен состоять минимум из 8 символов</span>
+              <!-- popup__error_server_visible -->
               <span class="popup__error popup__error_server">Неправильные почта или пароль</span>
               <button
                 class="popup__button popup__button_type_login button button_blue"
                 type="submit"
                 disabled
               >
-              <!-- disabled   -->
                 Войти
               </button>
             </fieldset>
@@ -366,9 +364,7 @@
           </p>
         </div>
       </section>
-
       <!-- Popup registration -->
-      <!-- popup_is-opened -->
       <section class="popup popup_type_reg">
         <div class="popup__container popup__container_margin-top_l">
           <button
@@ -426,6 +422,7 @@
                 required
               />
               <span class="popup__error popup__error_invalid-input">В имени должно быть от 2 до 30 символов</span>
+              <!-- popup__error_server_visible -->
               <span class="popup__error popup__error_server">Такой пользователь уже есть</span>
               <button
                 class="popup__button popup__button_type_reg button button_blue"

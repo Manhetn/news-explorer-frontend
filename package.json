@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/Manhetn/news-explorer-frontend/issues"
   },
-  "homepage": "https://github.com/Manhetn/news-explorer-frontend#readme",
+  "homepage": "https://github.com/Manhetn/news-explorer-frontend",
   "devDependencies": {
     "@babel/cli": "7.8.4",
     "@babel/core": "7.9.0",
