@@ -1,5 +1,5 @@
-@import url(./_type/_any/popup__input_type_any.css);
-@import url(./_type/_password/popup__input_type_password.css);
+@import url(./_padding/_equal/popup__input_padding_equal.css);
+@import url(./_padding/_unequal/popup__input_padding_unequal.css);
 
 .popup__input {
   width: 99.8%;

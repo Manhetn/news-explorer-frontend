@@ -1,7 +1,7 @@
 .articles__button {
   width: 288px;
   height: 64px;
-  margin: 2px 0px 80px -4px;
+  margin: 2px 0px 80px -4px; 
 }
 
 @media screen and (max-width: 1440px) {
@@ -12,7 +12,7 @@
   margin-top: calc( (100vw - 768px)/(1440 - 768) * (2 - 30) + 30px);
   margin-right: calc( (100vw - 768px)/(1440 - 768) * 4px);
   margin-bottom: calc( (100vw - 768px)/(1440 - 768) * (80 - 10) + 10px);
-  margin-left: calc( (100vw - 768px)/(1440 - 768) * (4 + 15) + 15px);
+  margin-left: calc( (100vw - 768px)/(1440 - 768) * (-4 - 15) + 15px);
   }
 }
 

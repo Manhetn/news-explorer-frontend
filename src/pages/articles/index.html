@@ -4,34 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../../images/favicon.svg" sizes="any" type="image/svg+xml">
-    <link rel="stylesheet" href="./index.css">
+    <!-- <link rel="stylesheet" href="./index.css"> -->
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.articles.css %>" />
     <title>NewsExplorer</title>
   </head>
   <body class="page">
 
     <header class="header header_shadow_darker">
       <div class="header__container">
-        <a 
-          class="header__logo header__logo_dark" 
-          href="#main" 
-          lang="en" 
+        <a
+          class="header__logo header__logo_dark"
+          href="./index.html"
+          lang="en"
           title="Ссылка на главную страницу NewsExplorer"
         >
         NewsExplorer
         </a>
-        <button 
-          class="button header__button_type_menu header__button_type_menu_open" 
+        <button
+          class="button header__button_type_menu header__button_type_menu_open"
           type="button"
         >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="4" y="8" width="16" height="2" fill="#1A1B22"/>
             <rect x="4" y="14" width="16" height="2" fill="#1A1B22"/>
-          </svg>         
+          </svg>
         </button>
       <!--  header__menu_is-opened -->
         <nav class="header__menu">
-          <button 
-            class="button header__button_type_menu header__button_type_menu_close" 
+          <button
+            class="button header__button_type_menu header__button_type_menu_close"
             type="button"
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -41,10 +42,10 @@
           </button>
           <ul class="header__list header__list_theme_light">
             <li class="header__list-iteam header__list-iteam_border-top_darker">
-              <a 
-                class="header__link header__link_dark" 
-                href="../main/index.html" 
-                lang="ru" 
+              <a
+                class="header__link header__link_dark"
+                href="./index.html"
+                lang="ru"
                 title="Ссылка на главную страницу NewsExplorer"
               >
               Главная
@@ -52,53 +53,49 @@
             </li>
             <li class="header__list-iteam">
               <!-- header__link_hidden -->
-              <a 
-                class="header__link header__link_dark header__link_dark-acting" 
-                href="../article/index.html" 
-                lang="ru" 
+              <a
+                class="header__link header__link_dark header__link_dark-acting"
+                href="../article/index.html"
+                lang="ru"
                 title="Ссылка на страницу с сохраненными статьями"
               >
               Сохранённые статьи
               </a>
             </li>
             <li class="header__list-iteam">
-              <button 
-                class="button header__button header__button_color_dark header__button_type_logout" 
+              <button
+                class="button header__button header__button_color_dark header__button_type_logout"
                 type="button"
-                
               >
-                Грета 
+                Грета
                 <svg class="header__icon-logout" width="24" height="24" viewBox="4 4 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M10 6L6 6L6 18H10V20H6C4.89543 20 4 19.1046 4 18V6C4 4.89543 4.89543 4 6 4H10V6ZM17.5856 13L13.2927 17.1339L14.707 18.4958L21.4141 12.0371L14.707 5.57837L13.2927 6.9402L17.5856 11.0741H8V13H17.5856Z" fill="#1A1B22"/>
                 </svg>
-                </button>
+              </button>
             </li>
           </ul>
         </nav>
       </div>
-          
     </header>
     <main class="content">
       <section class="information">
         <h1 class="information__title">Сохранённые статьи</h1>
         <p class="information__article-counter">Грета, у вас 5 сохранённых статей</p>
         <p class="information__detals">
-          По ключевым словам: 
-          <strong class="information__keyword">Природа, Тайга</strong> и 
+          По ключевым словам:
+          <strong class="information__keyword">Природа, Тайга</strong> и
           <strong class="information__counter">2</strong>
           <strong class="information__other">другим</strong>
         </p>
       </section>
       <!-- Articles -->
-
-
       <section class="articles articles_padding-bottom_m articles_is-opened">
         <div class="articles__list">
           <article class="article article_saved">
             <div class="article__menu">
               <span class="article__keyword">Природа</span>
-              <button 
-                class="article__button article__button-save" 
+              <button
+                class="article__button article__button-save"
                 type="button"
               >
                 <svg class="article__icone-button article__icone-button_type_basket article__icone-button_type_basket_light" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -111,7 +108,7 @@
               <span class="article__tooltip article__tooltip_type_remove">Убрать из сохранённых</span>
             </div>
             <a class="article__link" href="#">
-              <img class="article__image" src="../../images/image_01.jpg" alt="картинка как то связанная с статьей">
+              <img class="article__image" src="<%=require('../../images/image_01.jpg')%>" alt="картинка как то связанная с статьей">
               <div class="article__information">
                 <time class="article__date" datetime="2019-08-02">2 августа, 2019</time>
                 <h3 class="article__title">Национальное достояние – парки</h3>
@@ -124,8 +121,8 @@
           <article class="article article_saved">
             <div class="article__menu">
               <span class="article__keyword">Природа</span>
-              <button 
-                class="article__button article__button-save" 
+              <button
+                class="article__button article__button-save"
                 type="button"
               >
                 <svg class="article__icone-button article__icone-button_type_basket article__icone-button_type_basket_light" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -138,7 +135,7 @@
               <span class="article__tooltip article__tooltip_type_remove">Убрать из сохранённых</span>
             </div>
             <a class="article__link" href="#">
-              <img class="article__image" src="../../images/image_02.jpg" alt="картинка как то связанная с статьей">
+              <img class="article__image" src="<%=require('../../images/image_02.jpg')%>" alt="картинка как то связанная с статьей">
               <div class="article__information">
                 <time class="article__date" datetime="2019-08-02">2 августа, 2019</time>
                 <h3 class="article__title">Лесные огоньки: история одной фотографии</h3>
@@ -151,8 +148,8 @@
           <article class="article article_saved">
             <div class="article__menu">
               <span class="article__keyword">Природа</span>
-              <button 
-                class="article__button article__button-save" 
+              <button
+                class="article__button article__button-save"
                 type="button"
               >
                 <svg class="article__icone-button article__icone-button_type_basket article__icone-button_type_basket_light" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -165,7 +162,7 @@
               <span class="article__tooltip article__tooltip_type_remove">Убрать из сохранённых</span>
             </div>
             <a class="article__link" href="#">
-              <img class="article__image" src="../../images/image_03.jpg" alt="картинка как то связанная с статьей">
+              <img class="article__image" src="<%=require('../../images/image_03.jpg')%>" alt="картинка как то связанная с статьей">
               <div class="article__information">
                 <time class="article__date" datetime="2019-08-02">2 августа, 2019</time>
                 <h3 class="article__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
@@ -178,8 +175,8 @@
           <article class="article article_saved">
             <div class="article__menu">
               <span class="article__keyword">Природа</span>
-              <button 
-                class="article__button article__button-save" 
+              <button
+                class="article__button article__button-save"
                 type="button"
               >
                 <svg class="article__icone-button article__icone-button_type_basket article__icone-button_type_basket_light" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -192,7 +189,7 @@
               <span class="article__tooltip article__tooltip_type_remove">Убрать из сохранённых</span>
             </div>
             <a class="article__link" href="#">
-              <img class="article__image" src="../../images/image_01.jpg" alt="картинка как то связанная с статьей">
+              <img class="article__image" src="<%=require('../../images/image_01.jpg')%>" alt="картинка как то связанная с статьей">
               <div class="article__information">
                 <time class="article__date" datetime="2019-08-02">2 августа, 2019</time>
                 <h3 class="article__title">Национальное достояние – парки</h3>
@@ -205,8 +202,8 @@
           <article class="article article_saved">
             <div class="article__menu">
               <span class="article__keyword">Природа</span>
-              <button 
-                class="article__button article__button-save" 
+              <button
+                class="article__button article__button-save"
                 type="button"
               >
                 <svg class="article__icone-button article__icone-button_type_basket article__icone-button_type_basket_light" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -219,7 +216,7 @@
               <span class="article__tooltip article__tooltip_type_remove">Убрать из сохранённых</span>
             </div>
             <a class="article__link" href="#">
-              <img class="article__image" src="../../images/image_01.jpg" alt="картинка как то связанная с статьей">
+              <img class="article__image" src="<%=require('../../images/image_01.jpg')%>" alt="картинка как то связанная с статьей">
               <div class="article__information">
                 <time class="article__date" datetime="2019-08-02">2 августа, 2019</time>
                 <h3 class="article__title">Лесные огоньки: история одной фотографии</h3>
@@ -228,7 +225,7 @@
               <p class="article__source">Афиша</p>
             </a>
           </article>
-        </div> 
+        </div>
       </section>
     </main>
     <!-- footer -->
@@ -237,19 +234,19 @@
       <nav class="footer__navigation">
         <ul class="footer__list">
           <li class="footer__list-item">
-            <a 
-              class="footer__link" 
-              href="#main" 
-              lang="ru" 
+            <a
+              class="footer__link"
+              href="#main"
+              lang="ru"
               title="Ссылка на главную страницу NewsExplorer"
             >
               Главная
             </a>
           </li>
           <li class="footer__list-item">
-            <a class="footer__link" 
-              href="https://praktikum.yandex.ru" 
-              lang="ru" 
+            <a class="footer__link"
+              href="https://praktikum.yandex.ru"
+              lang="ru"
               title="Ссылка на Яндекс.Практикум"
             >
               Яндекс.Практикум
@@ -260,22 +257,22 @@
       <div class="footer__social">
         <ul class="footer__list">
           <li class="footer__list-item">
-            <a 
-              class="footer__link" 
-              href="https://github.com/Manhetn" 
-              lang="ru" 
+            <a
+              class="footer__link"
+              href="https://github.com/Manhetn"
+              lang="ru"
               title="Ссылка на GitHub автора"
-            > 
+            >
               <svg class="footer__social-icon" alt="Иконка GitHub" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9998 0.89473C5.41678 0.89473 0.894531 5.42318 0.894531 11C0.894531 15.4664 3.7915 19.2505 7.80507 20.5904C8.30754 20.6834 8.49364 20.3733 8.49364 20.1003C8.49364 19.8584 8.48744 19.2256 8.48123 18.382C5.67111 18.9899 5.07559 17.0297 5.07559 17.0297C4.61654 15.8634 3.95278 15.5533 3.95278 15.5533C3.03469 14.9267 4.02102 14.9391 4.02102 14.9391C5.03217 15.0136 5.57186 15.9813 5.57186 15.9813C6.47135 17.5259 7.93534 17.0793 8.51225 16.8187C8.6053 16.1674 8.86584 15.7207 9.15119 15.4664C6.90558 15.2121 4.54831 14.3436 4.54831 10.4727C4.54831 9.36851 4.93912 8.46902 5.59047 7.76184C5.48501 7.5075 5.13762 6.47775 5.68972 5.0882C5.68972 5.0882 6.53958 4.81525 8.46882 6.12416C9.27526 5.90084 10.1375 5.78918 10.9998 5.78297C11.8559 5.78918 12.7243 5.90084 13.5308 6.12416C15.46 4.81525 16.3099 5.0882 16.3099 5.0882C16.862 6.47775 16.5146 7.5075 16.4091 7.76184C17.0543 8.46902 17.4451 9.36851 17.4451 10.4727C17.4451 14.356 15.0816 15.2059 12.8298 15.4602C13.1896 15.7704 13.5184 16.3907 13.5184 17.3336C13.5184 18.6859 13.5059 19.7715 13.5059 20.1065C13.5059 20.3795 13.6858 20.6896 14.2007 20.5904C18.2143 19.2505 21.1051 15.4664 21.1051 11.0062C21.1051 5.42318 16.5828 0.89473 10.9998 0.89473Z" fill="#191717"/>
-              </svg>                   
+              </svg>
             </a>
           </li>
           <li class="footer__list-item">
-            <a 
-              class="footer__social-link" 
-              href="https://www.facebook.com" 
-              lang="ru" 
+            <a
+              class="footer__social-link"
+              href="https://www.facebook.com"
+              lang="ru"
               title="Ссылка на facebook автора"
             >
               <svg class="footer__social-icon footer__social-icon_square" alt="Иконка facebook" width="21" height="21" viewBox="-1 -1 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -289,5 +286,6 @@
         </ul>
       </div>
     </footer>
+    <script src="<%= htmlWebpackPlugin.files.chunks.articles.entry %>"></script>
   </body>
 </html>

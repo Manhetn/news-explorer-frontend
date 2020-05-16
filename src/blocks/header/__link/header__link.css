@@ -2,13 +2,13 @@
 @import url(./_dark-acting/header__link_dark-acting.css);
 @import url(./_light/header__link_light.css);
 @import url(./_light-acting/header__link_light-acting.css);
-@import url(./_hidden/header__link_hidden.css);
+@import url(./_page-user/header__link_page-user.css);
+@import url(./_visble/header__link_visble.css);
 
 .header__link {
   padding-top: 11px;
   padding-bottom: 23px;
   margin-left: 35px;
-  display: block;
   text-decoration: none;
 }
 

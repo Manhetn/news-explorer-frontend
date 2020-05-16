@@ -19,7 +19,6 @@
   .footer__copyright {
     width: calc( (100vw - 320px)/(767 - 320) * (586 - 286) + 286px);
     padding-top: calc( (100vw - 320px)/(767 - 320) * (0 - 7) + 7px);
-    padding-bottom: 10px;
     padding-left: 16px;
     order: 1;
     font-size: 16px;

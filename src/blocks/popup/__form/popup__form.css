@@ -3,10 +3,10 @@
   margin: 0px;
 }
 
-@media screen and (max-width: 523px) {
+@media screen and (max-width: 767px) {
   .popup__form {
-    padding-top: 16px;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-top: calc( (100vw - 320px)/(767 - 320) * (34 - 16) + 16px);
+    padding-left: calc( (100vw - 320px)/(767 - 320) * (36 - 16) + 16px);
+    padding-right: calc( (100vw - 320px)/(767 - 320) * (36 - 16) + 16px);
   }
 }
