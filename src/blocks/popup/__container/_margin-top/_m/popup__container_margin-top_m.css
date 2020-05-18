@@ -1,0 +1,9 @@
+.popup__container_margin-top_m {
+  margin-top: calc( (100vw - 768px)/(1440 - 768) * (74 - 33) + 33px);
+}
+
+@media screen and (max-width: 767px) {
+  .article {
+    margin-top: 0px;
+  }
+}

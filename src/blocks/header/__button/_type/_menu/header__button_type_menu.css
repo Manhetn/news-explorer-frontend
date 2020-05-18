@@ -1,0 +1,8 @@
+@import url(./_close/header__button_type_menu_close.css);
+@import url(./_open/header__button_type_menu_open.css);
+
+.header__button_type_menu {
+  padding: 0px;
+  background: transparent;
+  border: none;
+}

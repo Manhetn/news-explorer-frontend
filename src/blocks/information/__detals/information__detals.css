@@ -1,0 +1,22 @@
+.information__detals {
+  padding-top: 11px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+@media screen and (max-width: 1440px) {
+  .information__detals {
+    padding-top: calc( (100vw - 768px)/(1440 - 768) * (11 - 1) + 1px);
+    font-size: calc( (100vw - 768px)/(1440 - 768) * (18 - 14) + 14px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .information__detals {
+    padding-top: 1px;
+    margin-top: calc( (100vw - 320px)/(767 - 320) * (18 - 14) + 14px);
+    margin-bottom: 21px;
+    margin-left: calc( (100vw - 320px)/(767 - 320) * (0 - 15) + 15px);
+    font-size: calc( (100vw - 320px)/(767 - 320) * (14 - 18) + 18px);;
+  }
+}

@@ -1,0 +1,26 @@
+.information__title {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: 0;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: rgba(26, 27, 34, 0.5);
+}
+
+@media screen and (max-width: 1440px) {
+  .information__title {
+    padding-bottom: calc( (100vw - 768px)/(1440 - 768) * (15 - 10) + 10px);
+    font-size: calc( (100vw - 768px)/(1440 - 768) * (18 - 14) + 14px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .information__title {
+    padding-top: calc( (100vw - 320px)/(767 - 320) * (15 - 9) + 9px);
+    padding-bottom: calc( (100vw - 320px)/(767 - 320) * (10 - 15) + 15px);
+    margin-left: calc( (100vw - 320px)/(767 - 320) * (0 - 16) + 16px);
+    font-size: calc( (100vw - 320px)/(767 - 320) * (14 - 12) + 12px);
+  }
+}

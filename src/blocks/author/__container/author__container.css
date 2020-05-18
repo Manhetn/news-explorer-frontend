@@ -1,0 +1,21 @@
+.author__container {
+  width: 600px;
+  margin-top: 80px;
+  margin-left: 56px; 
+}
+
+@media screen and (max-width: 1440px) {
+  .author__container {
+    width: calc( (100vw - 768px)/(1440 - 768) * (600 - 415) + 415px);
+    margin-top: calc( (100vw - 768px)/(1440 - 768) * (80 - 0) + 0px);
+    margin-left: calc( (100vw - 768px)/(1440 - 768) * (56 - 32) + 32px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .author__container {
+    width: calc( (100vw - 320px)/(768 - 320) * (600 - 300) + 300px);
+    margin-top: 0px;
+    margin-left: calc( (100vw - 320px)/(768 - 320) * (32 - 12) + 12px);
+  }
+}

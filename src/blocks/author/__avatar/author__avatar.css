@@ -1,0 +1,25 @@
+.author__avatar {
+  width: 464px;
+  height: 464px;
+  margin-top: 80px;
+  margin-left: 104px;
+  border-radius: 1000px;
+}
+
+@media screen and (max-width: 1440px) {
+  .author__avatar {
+    width: calc( (100vw - 768px)/(1440 - 768) * (464 - 232) + 232px);
+    height: calc( (100vw - 768px)/(1440 - 768) * (464 - 232) + 232px);
+    margin-top: calc( (100vw - 768px)/(1440 - 768) * (80 - 61) + 61px);
+    margin-left: calc( (100vw - 768px)/(1440 - 768) * (104 - 40) + 40px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .author__avatar {
+    width: calc( (100vw - 320px)/(767 - 320) * (400 - 272) + 272px);
+    height: calc( (100vw - 320px)/(767 - 320) * (400 - 272) + 272px);
+    margin-top: 32px;
+    margin-left: 0px;
+  }
+}

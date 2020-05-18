@@ -1,0 +1,11 @@
+.not-found__title {
+  padding-top: 24px;
+  margin: 0px;
+  font-family: 'Roboto Slab', Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 30px;
+  text-align: center;
+  color: #1A1B22;
+}

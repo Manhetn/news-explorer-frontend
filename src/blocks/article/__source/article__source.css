@@ -1,0 +1,24 @@
+.article__source {
+  margin: 0px;
+  margin-left: 25px;
+  font-family: 'Roboto Slab', Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: #B6BCBF;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1440px) {
+  .article__source {
+    margin-left: calc( (100vw - 768px)/(1440 - 768) * (25 - 16) + 16px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .article__source {
+    margin-left: 16px;
+  }
+}

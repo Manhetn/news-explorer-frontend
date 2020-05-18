@@ -1,0 +1,10 @@
+@import url(./_type/_login/popup__button_type_login.css);
+@import url(./_type/_reg/popup__button_type_reg.css);
+
+.popup__button {
+  width: 100.5%;
+  height: 64px;
+  padding-left: 9px;
+  margin: 0px;
+  margin-left: -1px;
+}

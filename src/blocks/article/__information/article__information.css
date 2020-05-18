@@ -1,0 +1,33 @@
+.article__information {
+  height: 230px;
+  width: 350px;
+  margin-left: 25px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1440px) {
+  .article__information {
+    width: calc( (100vw - 768px)/(1440 - 768) * (350 - 200) + 200px);
+    height: calc( (100vw - 768px)/(1440 - 768) * (230 - 208) + 208px);
+    margin-left: calc( (100vw - 768px)/(1440 - 768) * (25 - 16) + 16px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .article__information {
+    width: calc( (100vw - 495px)/(767 - 495) * (251 - 200) + 200px);
+    height: calc( (100vw - 495px)/(767 - 495) * (180 - 208) + 208px);
+    margin-left: 16px;
+    margin-bottom: calc( (100vw - 495px)/(767 - 495) * (12 - 10) + 10px);
+  }
+}
+
+@media screen and (max-width: 495px) {
+  .article__information {
+    width: 251px;
+    height: 180px;
+    margin-left: 16px;
+    margin-bottom: 12px;
+  }
+}

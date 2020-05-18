@@ -1,0 +1,16 @@
+.articles_padding-bottom_l {
+  padding-bottom: 0px;
+}
+
+@media screen and (max-width: 1440px) {
+  .articles_padding-bottom_l {
+    padding-bottom: calc( (100vw - 768px)/(1440 - 768) * (0 - 30) + 30px);
+    
+  }
+}
+@media screen and (max-width: 767px) {
+  .articles_padding-bottom_l {
+    padding-bottom: 30px;
+    
+  }
+}

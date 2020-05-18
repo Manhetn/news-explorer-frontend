@@ -1,0 +1,27 @@
+@import url(./_blue/button_blue.css);
+@import url(./_white/button_white.css);
+
+.button {
+  margin: 0px;
+  border-radius: 100px;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+
+  font-family: 'Roboto', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  border: none;
+}
+
+.button:disabled {
+  width: 100%;
+  margin-left: 0px;
+  color: #B6BCBF;
+  background: #E6E8EB;
+  box-shadow: none;
+  cursor: default;
+  border: none;  
+}

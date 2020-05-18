@@ -1,0 +1,30 @@
+@import url(./__container/author__container.css);
+@import url(./__avatar/author__avatar.css);
+@import url(./__title/author__title.css);
+@import url(./__paragraph/author__paragraph.css);
+
+.author {
+  max-width: 1440px;
+  padding-bottom: 76px;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: row;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  color: #1A1B22; 
+}
+
+@media screen and (max-width: 1440px) {
+  .author {
+    padding-bottom: calc( (100vw - 768px)/(1440 - 768) * (76 - 48) + 48px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .author {
+    padding-bottom: calc( (100vw - 320px)/(768 - 320) * (48 - 56) + 56px);
+    flex-direction: column;
+    align-items: center;
+  }
+}

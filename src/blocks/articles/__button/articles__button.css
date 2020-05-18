@@ -1,0 +1,38 @@
+.articles__button {
+  width: 288px;
+  height: 64px;
+  margin: 2px 0px 80px -4px; 
+}
+
+@media screen and (max-width: 1440px) {
+  .articles__button {
+  width: calc( (100vw - 768px)/(1440 - 768) * (288 - 240) + 240px);
+  height: calc( (100vw - 768px)/(1440 - 768) * (64 - 56) + 56px);
+  padding-top: calc( (100vw - 768px)/(1440 - 768) * (2 - 3) + 3px);
+  margin-top: calc( (100vw - 768px)/(1440 - 768) * (2 - 30) + 30px);
+  margin-right: calc( (100vw - 768px)/(1440 - 768) * 4px);
+  margin-bottom: calc( (100vw - 768px)/(1440 - 768) * (80 - 10) + 10px);
+  margin-left: calc( (100vw - 768px)/(1440 - 768) * (-4 - 15) + 15px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .articles__button {
+    width: 288px;
+    height: 56px;
+    padding-left: 8px;
+    margin-top: 40px;
+    margin-bottom: calc( (100vw - 496px)/(767 - 496) * (10 - 2) + 2px);
+    margin-left: calc( (100vw - 496px)/(767 - 496) * (15 + 1) - 1px);
+  }
+}
+
+@media screen and (max-width: 495px) {
+  .articles__button {
+    height: 56px;
+    padding-left: 8px;
+    margin-top: 4px;
+    margin-bottom: 2px;
+    margin-left: -1px;
+  }
+}

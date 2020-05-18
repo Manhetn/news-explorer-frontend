@@ -1,0 +1,19 @@
+.popup__close {
+  padding: 0px;
+  border: none;
+  background: none;
+  position: absolute;
+  width: 40px;
+  top: -46px;
+  right: -46px;
+  z-index: 10;
+}
+
+@media screen and (max-width: 767px) {
+  .popup__close {
+    width: 24px;
+    height: 24px;
+    top: -40px;
+    right: calc( (100vw - 320px)/(767 - 320) * (20.5 - 16) + 16px);
+  }
+} 

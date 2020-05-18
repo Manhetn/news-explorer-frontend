@@ -1,0 +1,6 @@
+@import url(./_type/_basket/article__icone-button_type_basket.css);
+@import url(./_type/_bookmark/article__icone-button_type_bookmark.css);
+
+.article__icone-button {
+  margin: 0px;
+}

@@ -1,0 +1,6 @@
+@import url(./_light/article__icone-button_type_basket_light.css);
+@import url(./_dark/article__icone-button_type_basket_dark.css);
+
+.article__icone-button_type_basket {
+  padding: 8px;
+}

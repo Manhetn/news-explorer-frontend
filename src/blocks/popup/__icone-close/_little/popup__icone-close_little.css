@@ -1,0 +1,10 @@
+.popup__icone-close_little {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .popup__icone-close_little {
+    display: block;
+  }
+}
+ 

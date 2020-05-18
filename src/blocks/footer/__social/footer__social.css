@@ -1,0 +1,21 @@
+.footer__social {
+  width: 69px;
+  padding-left: 58px;
+}
+
+@media screen and (max-width: 1440px) {
+  .footer__social {
+    width: calc( (100vw - 768px)/(1440 - 768) * (69 - 70) + 70px);
+    padding-left: calc( (100vw - 768px)/(1440 - 768) * (58 - 33) + 33px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer__social {
+    width: 69px;
+    height: 80px;
+    padding-top: 1px;
+    padding-left: 0px;
+    margin-left: calc( (100vw - 320px)/(768 - 320) * (497 - 57) + 57px);
+  }
+}

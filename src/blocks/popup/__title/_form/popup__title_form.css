@@ -1,0 +1,11 @@
+.popup__title_form {
+  padding-bottom: 26px;
+  
+}
+
+@media screen and (max-width: 767px) {
+  .popup__title_form  {
+    padding-bottom: calc( (100vw - 320px)/(767 - 320) * (26 - 17) + 17px);
+    padding-left: 1px;
+  }
+}

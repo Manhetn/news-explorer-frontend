@@ -1,0 +1,12 @@
+.popup__subbutton.popup__subbutton_success {
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.001em;
+  margin-left: 36px;
+}
+
+@media screen and (max-width: 523px) {
+  .popup__subbutton.popup__subbutton_success {
+    margin-left: 26px;
+  }
+}

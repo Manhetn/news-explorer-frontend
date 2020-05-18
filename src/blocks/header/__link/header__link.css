@@ -1,0 +1,33 @@
+@import url(./_dark/header__link_dark.css);
+@import url(./_dark-acting/header__link_dark-acting.css);
+@import url(./_light/header__link_light.css);
+@import url(./_light-acting/header__link_light-acting.css);
+@import url(./_page-user/header__link_page-user.css);
+@import url(./_visble/header__link_visble.css);
+
+.header__link {
+  padding-top: 11px;
+  padding-bottom: 23px;
+  margin-left: 35px;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1440px) {
+  .header__link  {
+    padding-top: calc( (100vw - 768px)/(1440 - 768) * (11 - 8) + 8px);
+    padding-bottom: calc( (100vw - 768px)/(1440 - 768) * (23 - 17) + 17px);
+    margin-left: calc( (100vw - 768px)/(1440 - 768) * (35 - 19) + 19px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header__link  {
+    width: fit-content;
+    padding: 0px;
+    padding-top: 31px;
+    margin-left: calc( (100vw - 320px)/(768 - 320) * (40 - 16) + 16px);
+    border: none;
+    font-size: 18px;
+    line-height: 25px;
+  }
+}

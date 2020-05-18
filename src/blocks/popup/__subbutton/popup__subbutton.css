@@ -1,0 +1,13 @@
+@import url(./_success/popup__subbutton_success.css);
+@import url(./_form/popup__subbutton_form.css);
+
+.popup__subbutton {
+  padding: 0px;
+  color: #2F71E5;
+  text-decoration: none;
+  letter-spacing: 0.008em;
+  font-family: 'Inter', Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  background: none;
+}

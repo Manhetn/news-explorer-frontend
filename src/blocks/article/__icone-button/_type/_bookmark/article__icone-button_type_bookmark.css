@@ -1,0 +1,11 @@
+@import url(./_light/article__icone-button_type_bookmark_light.css);
+@import url(./_dark/article__icone-button_type_bookmark_dark.css);
+@import url(./_blue/article__icone-button_type_bookmark_blue.css);
+
+.article__icone-button_type_bookmark {
+  padding-left: 13px;
+  padding-right: 13px;
+  padding-top:11px;
+  padding-bottom: 11px;
+}
+

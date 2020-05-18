@@ -1,0 +1,27 @@
+.footer__navigation {
+  width: 265px;
+  margin-left: 538px;
+}
+
+@media screen and (max-width: 1440px) {
+  .footer__navigation{
+    width: calc( (100vw - 768px)/(1440 - 768) * (265 - 246) + 246px);
+    margin-left: calc( (100vw - 768px)/(1440 - 768) * (538 - 38) + 38px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer__navigation {
+    width: 160px;
+    height: 80px;
+    margin-left: 16px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .footer__navigation{
+    width: 160px;
+    height: 80px;
+    margin-left: 16px;
+  }
+}
