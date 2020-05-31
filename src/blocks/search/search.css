@@ -3,6 +3,7 @@
 @import url(./__input/search__input.css);
 @import url(./__subtitle/search__subtitle.css);
 @import url(./__button/search__button.css);
+@import url(./__error/search__error.css);
 
 .search {
   width: 100%;
@@ -34,6 +35,6 @@
 @media screen and (max-width: 320px) {
   .search {
     background-image: url(../../images/georgia-320.jpg);
-  
+
   }
 }

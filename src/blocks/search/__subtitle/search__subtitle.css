@@ -28,6 +28,6 @@
     width: calc( (100vw - 320px)/(767 - 320) * (368 - 290) + 290px);
     height: 96px;
     padding-left: 0px;
-    margin-bottom: calc( (100vw - 320px)/(768 - 320) * (0 - 98) + 98px);
+    margin-bottom: calc( (100vw - 320px)/(768 - 320) * (0 - 38) + 38px);
   }
 }

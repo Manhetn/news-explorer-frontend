@@ -100,14 +100,28 @@
     </header>
     <main class="content">
       <section class="search">
-        <form class="search__form" name="search">
+        <form
+          class="search__form form"
+          name="search"
+          novalidate
+        >
           <legend class="search__title">Что в мире творится?</legend>
           <button
-            class="search__button button button_blue"
+            class="search__button button form__button"
             type="submit"
+
           >
             Искать
           </button>
+          <input class="search__input form__input form__input_word"
+          type="text"
+          name="word"
+          id="search-word"
+          placeholder="Введите тему новости"
+          minlength= "2"
+          maxlength= "30"
+          required
+          />
           <label
             class="search__subtitle search__subtitle_visible"
             for="word"
@@ -120,12 +134,7 @@
           >
             Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.
           </label>
-          <input class="search__input"
-            type="text"
-            name="word"
-            placeholder="Введите тему новости"
-            required
-          />
+          <span class="search__error form__error_word form__error">должно быть от 2 до 30</span>
         </form>
 
       </section>
@@ -323,30 +332,30 @@
               <legend class="popup__title popup__title_form">Вход</legend>
               <label class="popup__label" for="email">Email</label>
               <input
-                class="popup__input popup__input_padding_unequal"
+                class="popup__input popup__input_padding_unequal form__input"
                 type="email"
                 name="email"
-                id="email"
+                id="login-email"
                 placeholder="Введите почту"
                 pattern="(([a-z0-9]+((_|\.|-)[a-z0-9]+)+)|[a-z0-9]{2,})@[a-z]{2,}(\.[a-z]{2,6})+"
                 required
               />
-              <span class="popup__error popup__error_invalid-input">Неправильный формат email</span>
+              <span class="popup__error popup__error_invalid-input form__error">Неправильный формат email</span>
               <label class="popup__label" for="password">Пароль</label>
               <input
-                class="popup__input popup__input_padding_equal"
+                class="popup__input popup__input_padding_equal form__input"
                 type="password"
                 name="password"
-                id="password"
+                id="login-password"
                 placeholder="Введите пароль"
                 minlength="8"
                 required
               />
-              <span class="popup__error popup__error_invalid-input">Пароль должен состоять минимум из 8 символов</span>
+              <span class="popup__error popup__error_invalid-input form__error">Пароль должен состоять минимум из 8 символов</span>
               <!-- popup__error_server_visible -->
-              <span class="popup__error popup__error_server">Неправильные почта или пароль</span>
+              <span class="popup__error popup__error_server form__error">Неправильные почта или пароль</span>
               <button
-                class="popup__button popup__button_type_login button button_blue"
+                class="popup__button popup__button_type_login button form__button"
                 type="submit"
                 disabled
               >
@@ -388,44 +397,44 @@
               <legend class="popup__title popup__title_form">Регистрация</legend>
               <label class="popup__label" for="email">Email</label>
               <input
-                class="popup__input popup__input_padding_unequal"
+                class="popup__input popup__input_padding_unequal form__input"
                 type="email"
                 name="email"
-                id="email"
+                id="reg-email"
                 placeholder="Введите почту"
                 pattern="(([a-z0-9]+((_|\.|-)[a-z0-9]+)+)|[a-z0-9]{2,})@[a-z]{2,}(\.[a-z]{2,6})+"
                 required
               />
-              <span class="popup__error popup__error_invalid-input">Неправильный формат email</span>
+              <span class="popup__error popup__error_invalid-input form__error">Неправильный формат email</span>
               <label class="popup__label" for="password">Пароль</label>
               <input
-                class="popup__input popup__input_padding_equal"
+                class="popup__input popup__input_padding_equal form__input"
                 type="password"
                 name="password"
-                id="password"
+                id="reg-password"
                 placeholder="Введите пароль"
                 minlength="8"
                 required
               />
-              <span class="popup__error popup__error_invalid-input">
+              <span class="popup__error popup__error_invalid-input form__error">
                 Пароль должен состоять минимум из 8 символов
               </span>
               <label class="popup__label" for="name">Имя</label>
               <input
-                class="popup__input popup__input_padding_unequal"
+                class="popup__input popup__input_padding_unequal form__input"
                 type="text"
                 name="name"
-                id="name"
+                id="reg-name"
                 placeholder="Введите своё имя"
                 minlength="2"
                 maxlength="30"
                 required
               />
-              <span class="popup__error popup__error_invalid-input">В имени должно быть от 2 до 30 символов</span>
+              <span class="popup__error popup__error_invalid-input form__error">В имени должно быть от 2 до 30 символов</span>
               <!-- popup__error_server_visible -->
-              <span class="popup__error popup__error_server">Такой пользователь уже есть</span>
+              <span class="popup__error popup__error_server form__error">Такой пользователь уже есть</span>
               <button
-                class="popup__button popup__button_type_reg button button_blue"
+                class="popup__button popup__button_type_reg button form__button"
                 type="submit"
                 disabled
               >

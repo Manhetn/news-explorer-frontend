@@ -8,3 +8,7 @@
   margin: 0px;
   margin-left: -1px;
 }
+
+.popup__button:disabled {
+  width: 100%;
+}

@@ -1,9 +1,5 @@
-@import url(./visible/popup__error_server_visible.css);
-
 .popup__error_server {
   z-index: 10;
-  display: block;
   text-align: center;
   margin-bottom: 7px;
-  visibility: hidden;
 }

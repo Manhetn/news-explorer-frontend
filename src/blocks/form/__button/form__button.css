@@ -1,0 +1,23 @@
+.form__button {
+  height: 64px;
+  background: #2F71E5;
+  box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
+  color: #ffffff;
+}
+
+.form__button:hover {
+  background: #347EFF;
+}
+
+.form__button:active {
+  background: #2A65CC;
+}
+
+.form__button:disabled {
+  margin-left: 0px;
+  color: #B6BCBF;
+  background: #E6E8EB;
+  box-shadow: none;
+  cursor: default;
+  border: none;
+}
