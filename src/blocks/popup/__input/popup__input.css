@@ -31,7 +31,4 @@
 .popup__input::-moz-placeholder { color: #cccccc; }
 .popup__input::-webkit-input-placeholder { color:#cccccc; }
 
-.popup__input:invalid:not(:placeholder-shown) + .form__error {
-  visibility: visible;
-}
 

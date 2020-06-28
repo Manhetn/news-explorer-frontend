@@ -1,0 +1,9 @@
+.article__button_bookmark.article__button_bookmark_blue {
+  background: url(../../../../../images/bookmark-blue.svg) center no-repeat;
+  background-color: #ffffff;
+}
+
+.article__button_bookmark.article__button_bookmark_blue:hover {
+  background: url(../../../../../images/bookmark-blue.svg) center no-repeat;
+  background-color: #ffffff;
+}

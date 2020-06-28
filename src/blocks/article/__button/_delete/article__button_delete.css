@@ -1,0 +1,12 @@
+.article__button_delete {
+  background: url(../../../../images/basket-light.svg) center no-repeat;
+}
+
+.article__button_delete:hover {
+  background: url(../../../../images/basket-dark.svg) center no-repeat;
+  background-color: #ffffff;
+}
+
+.article__button_delete:hover ~ .article__tooltip {
+  display: block;
+}

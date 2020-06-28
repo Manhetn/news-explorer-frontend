@@ -1,4 +1,5 @@
 .article__tooltip_type_login {
+  display: none;
   width: 182px;
   padding-top: 14px;
   padding-left: 12px;

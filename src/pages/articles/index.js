@@ -1,18 +1,44 @@
 import './index.css';
 
-// eslint-disable-next-line no-undef
-const root = document.querySelector('.page');
-const menuHeader = root.querySelector('.header__menu');
-const buttonOpenMenu = root.querySelector('.header__button_type_menu_open');
-const buttonCloseMenuHeadr = menuHeader.querySelector('.header__button_type_menu_close');
+import Storage from '../../scripts/components/Storage';
 
-function openMenu() {
-  menuHeader.classList.add('header__menu_is-opened');
-}
+import Header from '../../scripts/components/Header';
+import HEADER_PARAMETERS from '../../scripts/constants/header';
 
-function closeMenu() {
-  menuHeader.classList.remove('header__menu_is-opened');
-}
+import MainApi from '../../scripts/api/MainApi';
+import MAIN_API_PARAMETERS from '../../scripts/constants/main-api';
 
-buttonOpenMenu.addEventListener('click', openMenu);
-buttonCloseMenuHeadr.addEventListener('click', closeMenu);
+import Preloader from '../../scripts/components/Preloader';
+import PRELOADER_PARAMETERS from '../../scripts/constants/preloader';
+
+import Articles from '../../scripts/components/Articles';
+import ARTICLES_LIST_PARAMETERS from '../../scripts/constants/articles';
+
+import Article from '../../scripts/components/Article';
+import ARTICLE_PARAMETERS from '../../scripts/constants/article';
+
+import Information from '../../scripts/components/Information';
+import INFORMATION_PARAMETERS from '../../scripts/constants/information';
+
+import Page from '../../scripts/components/Page';
+
+import backToTheMainPage from '../../scripts/utils/backToTheMainPage';
+import conversionDate from '../../scripts/utils/conversionDate';
+import MONTHS from '../../scripts/constants/months';
+
+const page = new Page('Articles');
+const information = new Information(INFORMATION_PARAMETERS);
+const storage = new Storage(sessionStorage);
+const header = new Header(HEADER_PARAMETERS);
+const mainApi = new MainApi(MAIN_API_PARAMETERS);
+const preloader = new Preloader(PRELOADER_PARAMETERS);
+const articles = new Articles(ARTICLES_LIST_PARAMETERS);
+const article = new Article(ARTICLE_PARAMETERS);
+
+header.getDependencies({ page, storage, mainApi, backToTheMainPage });
+article.getDependencies({ storage, mainApi, MONTHS, information, conversionDate, articles });
+articles.getDependencies({ article, storage, mainApi, page, information, preloader });
+page.getDependencies({ storage, header, article, articles });
+information.getDependencies({ storage, articles });
+
+page.fillPage();

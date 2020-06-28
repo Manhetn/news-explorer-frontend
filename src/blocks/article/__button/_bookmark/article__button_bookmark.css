@@ -1,0 +1,10 @@
+@import url(./_blue/article__button_bookmark_blue.css);
+
+.article__button_bookmark {
+  background: url(../../../../images/bookmark-wight.svg) center no-repeat;
+}
+
+.article__button_bookmark:hover {
+  background: url(../../../../images/bookmark-dark.svg) center no-repeat;
+  background-color: #ffffff;
+}

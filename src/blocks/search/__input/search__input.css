@@ -42,10 +42,6 @@
   }
 }
 
-.search__input:invalid:not(:placeholder-shown) ~ .search__error {
-  visibility: visible;
-}
-
 .search__input:focus ~ .search__subtitle_visible {
   display: none;
 }
