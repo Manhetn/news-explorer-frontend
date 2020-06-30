@@ -1,8 +1,6 @@
 .search__form {
   width: 608px;
   padding-top: 160px;
-  margin: 0px auto;
- 
   display: flex;
   flex-direction: column;
   position: relative;
@@ -18,7 +16,7 @@
 
 @media screen and (max-width: 767px) {
   .search__form {
-    width: calc( (100vw - 320px)/(767 - 320) * (652 - 288) + 288px); 
+    width: calc( (100vw - 320px)/(767 - 320) * (652 - 288) + 288px);
     padding-top: calc( (100vw - 320px)/(767 - 320) * (104 - 86) + 86px);
   }
 }

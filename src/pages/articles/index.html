@@ -75,7 +75,7 @@
                 class="button header__button header__button_color_dark header__button_type_logout"
                 type="button"
               >
-                Грета
+                <span class="header__name-user">Грета</span>
                 <svg class="header__icon-logout" width="24" height="24" viewBox="4 4 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M10 6L6 6L6 18H10V20H6C4.89543 20 4 19.1046 4 18V6C4 4.89543 4.89543 4 6 4H10V6ZM17.5856 13L13.2927 17.1339L14.707 18.4958L21.4141 12.0371L14.707 5.57837L13.2927 6.9402L17.5856 11.0741H8V13H17.5856Z" fill="#1A1B22"/>
                 </svg>
@@ -88,147 +88,15 @@
     <main class="content">
       <section class="information">
         <h1 class="information__title">Сохранённые статьи</h1>
-        <p class="information__article-counter">Грета, у вас 5 сохранённых статей</p>
-        <p class="information__detals">
-          По ключевым словам:
-          <strong class="information__keyword">Природа, Тайга</strong> и
-          <strong class="information__counter">2</strong>
-          <strong class="information__other">другим</strong>
-        </p>
+        <p class="information__text"></p>
+        <p class="information__detals"></p>
+      </section>
+      <section class="preloader">
+        <i class="preloader__circle"></i>
+        <h2 class="preloader__title">Получаем ваши сохраненные статьи...</h2>
       </section>
       <section class="articles articles_padding-bottom_m articles_is-opened">
-        <div class="articles__list">
-          <article class="article article_saved">
-            <div class="article__menu">
-              <span class="article__keyword">Природа</span>
-              <button
-                class="article__button article__button-save"
-                type="button"
-              >
-                <svg class="article__icone-button article__icone-button_type_basket article__icone-button_type_basket_light" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M15 3H9V5H3V7H21V5H15V3ZM5 9V20C5 21.1046 5.89543 22 7 22H17C18.1046 22 19 21.1046 19 20V9H17V20H7V9H5ZM9 9L9 18H11L11 9H9ZM13 9V18H15V9H13Z" fill="#B6BCBF"/>
-                </svg>
-                <svg class="article__icone-button article__icone-button_type_basket article__icone-button_type_basket_dark" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M15 3H9V5H3V7H21V5H15V3ZM5 9V20C5 21.1046 5.89543 22 7 22H17C18.1046 22 19 21.1046 19 20V9H17V20H7V9H5ZM9 9L9 18H11L11 9H9ZM13 9V18H15V9H13Z" fill="#1A1B22"/>
-                </svg>
-              </button>
-              <span class="article__tooltip article__tooltip_type_remove">Убрать из сохранённых</span>
-            </div>
-            <a class="article__link" href="#">
-              <img class="article__image" src="<%=require('../../images/image_01.jpg')%>" alt="картинка как то связанная с статьей">
-              <div class="article__information">
-                <time class="article__date" datetime="2019-08-02">2 августа, 2019</time>
-                <h3 class="article__title">Национальное достояние – парки</h3>
-                <p class="article__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-              </div>
-              <p class="article__source">Дзен</p>
-            </a>
-          </article>
-          <article class="article article_saved">
-            <div class="article__menu">
-              <span class="article__keyword">Природа</span>
-              <button
-                class="article__button article__button-save"
-                type="button"
-              >
-                <svg class="article__icone-button article__icone-button_type_basket article__icone-button_type_basket_light" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M15 3H9V5H3V7H21V5H15V3ZM5 9V20C5 21.1046 5.89543 22 7 22H17C18.1046 22 19 21.1046 19 20V9H17V20H7V9H5ZM9 9L9 18H11L11 9H9ZM13 9V18H15V9H13Z" fill="#B6BCBF"/>
-                </svg>
-                <svg class="article__icone-button article__icone-button_type_basket article__icone-button_type_basket_dark" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M15 3H9V5H3V7H21V5H15V3ZM5 9V20C5 21.1046 5.89543 22 7 22H17C18.1046 22 19 21.1046 19 20V9H17V20H7V9H5ZM9 9L9 18H11L11 9H9ZM13 9V18H15V9H13Z" fill="#1A1B22"/>
-                </svg>
-              </button>
-              <span class="article__tooltip article__tooltip_type_remove">Убрать из сохранённых</span>
-            </div>
-            <a class="article__link" href="#">
-              <img class="article__image" src="<%=require('../../images/image_02.jpg')%>" alt="картинка как то связанная с статьей">
-              <div class="article__information">
-                <time class="article__date" datetime="2019-08-02">2 августа, 2019</time>
-                <h3 class="article__title">Лесные огоньки: история одной фотографии</h3>
-                <p class="article__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
-              </div>
-              <p class="article__source">Афиша</p>
-            </a>
-          </article>
-          <article class="article article_saved">
-            <div class="article__menu">
-              <span class="article__keyword">Природа</span>
-              <button
-                class="article__button article__button-save"
-                type="button"
-              >
-                <svg class="article__icone-button article__icone-button_type_basket article__icone-button_type_basket_light" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M15 3H9V5H3V7H21V5H15V3ZM5 9V20C5 21.1046 5.89543 22 7 22H17C18.1046 22 19 21.1046 19 20V9H17V20H7V9H5ZM9 9L9 18H11L11 9H9ZM13 9V18H15V9H13Z" fill="#B6BCBF"/>
-                </svg>
-                <svg class="article__icone-button article__icone-button_type_basket article__icone-button_type_basket_dark" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M15 3H9V5H3V7H21V5H15V3ZM5 9V20C5 21.1046 5.89543 22 7 22H17C18.1046 22 19 21.1046 19 20V9H17V20H7V9H5ZM9 9L9 18H11L11 9H9ZM13 9V18H15V9H13Z" fill="#1A1B22"/>
-                </svg>
-              </button>
-              <span class="article__tooltip article__tooltip_type_remove">Убрать из сохранённых</span>
-            </div>
-            <a class="article__link" href="#">
-              <img class="article__image" src="<%=require('../../images/image_03.jpg')%>" alt="картинка как то связанная с статьей">
-              <div class="article__information">
-                <time class="article__date" datetime="2019-08-02">2 августа, 2019</time>
-                <h3 class="article__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
-                <p class="article__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
-              </div>
-              <p class="article__source">Медиазона</p>
-            </a>
-          </article>
-          <article class="article article_saved">
-            <div class="article__menu">
-              <span class="article__keyword">Природа</span>
-              <button
-                class="article__button article__button-save"
-                type="button"
-              >
-                <svg class="article__icone-button article__icone-button_type_basket article__icone-button_type_basket_light" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M15 3H9V5H3V7H21V5H15V3ZM5 9V20C5 21.1046 5.89543 22 7 22H17C18.1046 22 19 21.1046 19 20V9H17V20H7V9H5ZM9 9L9 18H11L11 9H9ZM13 9V18H15V9H13Z" fill="#B6BCBF"/>
-                </svg>
-                <svg class="article__icone-button article__icone-button_type_basket article__icone-button_type_basket_dark" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M15 3H9V5H3V7H21V5H15V3ZM5 9V20C5 21.1046 5.89543 22 7 22H17C18.1046 22 19 21.1046 19 20V9H17V20H7V9H5ZM9 9L9 18H11L11 9H9ZM13 9V18H15V9H13Z" fill="#1A1B22"/>
-                </svg>
-              </button>
-              <span class="article__tooltip article__tooltip_type_remove">Убрать из сохранённых</span>
-            </div>
-            <a class="article__link" href="#">
-              <img class="article__image" src="<%=require('../../images/image_01.jpg')%>" alt="картинка как то связанная с статьей">
-              <div class="article__information">
-                <time class="article__date" datetime="2019-08-02">2 августа, 2019</time>
-                <h3 class="article__title">Национальное достояние – парки</h3>
-                <p class="article__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-              </div>
-              <p class="article__source">Дзен</p>
-            </a>
-          </article>
-          <article class="article article_saved">
-            <div class="article__menu">
-              <span class="article__keyword">Природа</span>
-              <button
-                class="article__button article__button-save"
-                type="button"
-              >
-                <svg class="article__icone-button article__icone-button_type_basket article__icone-button_type_basket_light" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M15 3H9V5H3V7H21V5H15V3ZM5 9V20C5 21.1046 5.89543 22 7 22H17C18.1046 22 19 21.1046 19 20V9H17V20H7V9H5ZM9 9L9 18H11L11 9H9ZM13 9V18H15V9H13Z" fill="#B6BCBF"/>
-                </svg>
-                <svg class="article__icone-button article__icone-button_type_basket article__icone-button_type_basket_dark" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M15 3H9V5H3V7H21V5H15V3ZM5 9V20C5 21.1046 5.89543 22 7 22H17C18.1046 22 19 21.1046 19 20V9H17V20H7V9H5ZM9 9L9 18H11L11 9H9ZM13 9V18H15V9H13Z" fill="#1A1B22"/>
-                </svg>
-              </button>
-              <span class="article__tooltip article__tooltip_type_remove">Убрать из сохранённых</span>
-            </div>
-            <a class="article__link" href="#">
-              <img class="article__image" src="<%=require('../../images/image_01.jpg')%>" alt="картинка как то связанная с статьей">
-              <div class="article__information">
-                <time class="article__date" datetime="2019-08-02">2 августа, 2019</time>
-                <h3 class="article__title">Лесные огоньки: история одной фотографии</h3>
-                <p class="article__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
-              </div>
-              <p class="article__source">Афиша</p>
-            </a>
-          </article>
-        </div>
+        <div class="articles__list"></div>
       </section>
     </main>
     <!-- footer -->

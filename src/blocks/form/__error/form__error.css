@@ -1,0 +1,5 @@
+@import url(./_visible/form__error_visible.css);
+
+.form__error {
+  visibility: hidden;
+}

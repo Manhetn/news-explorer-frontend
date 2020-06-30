@@ -1,7 +1,16 @@
 .articles__button {
   width: 288px;
   height: 64px;
-  margin: 2px 0px 80px -4px; 
+  margin: 2px 0px 80px -4px;
+  border-radius: 80px;
+  padding-bottom: 6px;
+  background: #ffffff;
+  box-shadow: none;
+  color: #000000;
+}
+
+.articles__button:hover {
+  opacity: 0.8;
 }
 
 @media screen and (max-width: 1440px) {

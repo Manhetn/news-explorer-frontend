@@ -1,157 +1,88 @@
 import './index.css';
 
-// eslint-disable-next-line no-undef
-const root = document.querySelector('.page');
+import Page from '../../scripts/components/Page';
 
-// constants header
-const menuHeader = root.querySelector('.header__menu');
-const buttonOpenMenu = root.querySelector('.header__button_type_menu_open');
-const buttonOpenLogin = menuHeader.querySelector('.header__button_type_login');
-const buttonCloseMenuHeadr = menuHeader.querySelector('.header__button_type_menu_close');
-const linkPageUser = menuHeader.querySelector('.header__link_page-user');
-const buttonLogout = menuHeader.querySelector('.header__button_type_logout');
+import Storage from '../../scripts/components/Storage';
 
-// constants popup login
-const popupLogin = root.querySelector('.popup_type_login');
-const buttonCloseLogin = popupLogin.querySelector('.popup__close');
-const buttonLoginOpenReg = popupLogin.querySelector('.popup__subbutton');
-const formLogin = popupLogin.querySelector('.popup__form');
-const inputEmailLogin = formLogin.elements.email;
-const inputPasswordLogin = formLogin.elements.password;
-const buttonLogin = formLogin.querySelector('.popup__button');
+import Header from '../../scripts/components/Header';
+import HEADER_PARAMETERS from '../../scripts/constants/header';
 
-// constants popup reg
-const popupReg = root.querySelector('.popup_type_reg');
-const buttonCloseReg = popupReg.querySelector('.popup__close');
-const buttonRegOpenLogin = popupReg.querySelector('.popup__subbutton');
-const formReg = popupReg.querySelector('.popup__form');
-const inputEmailReg = formReg.elements.email;
-const inputPasswordReg = formReg.elements.password;
-const inputNamReg = formReg.elements.name;
-const buttonReg = formReg.querySelector('.popup__button');
+import PopupLogin from '../../scripts/components/PopupLogin';
+import POPUP_LOGIN_CONTENT from '../../scripts/constants/popup-login';
 
-// constants popup success
-const popupSuccess = root.querySelector('.popup_type_success');
-const buttonSuccess = popupSuccess.querySelector('.popup__subbutton');
-const buttonCloseSuccess = popupSuccess.querySelector('.popup__close');
+import PopupRegistration from '../../scripts/components/PopupRegistration';
+import POPUP_REGISTRATION_CONTENT from '../../scripts/constants/popup-registration';
 
-// constants search
-const searchForm = root.querySelector('.search__form');
-const buttonSearch = searchForm.querySelector('.search__button');
+import PopupSuccess from '../../scripts/components/PopupSuccess';
+import POPUP_SUCCESS_CONTENT from '../../scripts/constants/popup-success';
 
-// constants article list
-const articlesList = root.querySelector('.articles')
+import POPUP_PARAMETERS from '../../scripts/constants/popup';
 
-// functions header
-function openPopupLogin() {
-  popupLogin.classList.add('popup_is-opened');
-}
+import Validation from '../../scripts/components/Validation';
+import VALIDATION_PARAMETERS from '../../scripts/constants/validation-parameters';
+import MESSAGES_ERROR_RU from '../../scripts/constants/messages-error';
 
-function openMenu() {
-  menuHeader.classList.add('header__menu_is-opened');
-}
+import Search from '../../scripts/components/Search';
+import SEARCH_PARAMETERS from '../../scripts/constants/search-parameters';
 
-function closeMenu() {
-  menuHeader.classList.remove('header__menu_is-opened');
-}
+import Preloader from '../../scripts/components/Preloader';
+import PRELOADER_PARAMETERS from '../../scripts/constants/preloader';
 
-function logout() {
-  linkPageUser.classList.remove('header__link_visble');
-  buttonOpenLogin.removeAttribute('disabled', false);
-  buttonLogout.setAttribute('disabled', true);
-}
+import NotFound from '../../scripts/components/NotFound';
+import NOT_FOUND_PARAMETERS from '../../scripts/constants/notFound';
 
-// functions popup login
-function closePopupLogin() {
-  popupLogin.classList.remove('popup_is-opened');
-};
+import Articles from '../../scripts/components/Articles';
+import ARTICLES_LIST_PARAMETERS from '../../scripts/constants/articles';
 
-function checkFormLogin() {
-  if (inputEmailLogin.validity.valid && inputPasswordLogin.validity.valid ) {
-    buttonLogin.removeAttribute('disabled', false);
-  }
-}
+import Article from '../../scripts/components/Article';
+import ARTICLE_PARAMETERS from '../../scripts/constants/article';
 
-function openPopupReg() {
-  popupReg.classList.add('popup_is-opened');
-};
+import MainApi from '../../scripts/api/MainApi';
+import MAIN_API_PARAMETERS from '../../scripts/constants/main-api';
 
-function openRegCloseLogin() {
-  closePopupLogin();
-  openPopupReg();
-}
+import NewsApi from '../../scripts/api/NewsApi';
+import NEWS_API_PARAMETERS from '../../scripts/constants/news-api';
 
-function login(event) {
-  event.preventDefault();
-  linkPageUser.classList.add('header__link_visble');
-  buttonLogout.removeAttribute('disabled', false);
-  buttonOpenLogin.setAttribute('disabled', true);
-  closePopupLogin();
-}
+// утилиты
+import getDateAgo from '../../scripts/utils/getDateAgo';
+import conversionDate from '../../scripts/utils/conversionDate';
+import removeUnnecessaryTags from '../../scripts/utils/removeUnnecessaryTags';
+import getDataFoundArticles from '../../scripts/utils/getDataFoundArticles'
 
-// functions popup reg
+// константы
+import MONTHS from '../../scripts/constants/months';
 
+const page = new Page('Main');
+const storage = new Storage(sessionStorage);
+const header = new Header(HEADER_PARAMETERS);
+const popupLogin = new PopupLogin(POPUP_PARAMETERS, POPUP_LOGIN_CONTENT);
+const popupRegistration = new PopupRegistration(POPUP_PARAMETERS, POPUP_REGISTRATION_CONTENT);
+const popupSuccess = new PopupSuccess(POPUP_PARAMETERS, POPUP_SUCCESS_CONTENT);
+const validation = new Validation(VALIDATION_PARAMETERS, MESSAGES_ERROR_RU)
+const search = new Search(SEARCH_PARAMETERS);
+const preloader = new Preloader(PRELOADER_PARAMETERS);
+const notFound = new NotFound(NOT_FOUND_PARAMETERS);
+const articles = new Articles(ARTICLES_LIST_PARAMETERS);
+const article = new Article(ARTICLE_PARAMETERS);
+const mainApi = new MainApi(MAIN_API_PARAMETERS);
+const newsApi = new NewsApi(NEWS_API_PARAMETERS);
 
-function closePopupReg() {
-  popupReg.classList.remove('popup_is-opened');
-}
+page.getDependencies({ header, search });
+header.getDependencies({ page, storage, popupLogin, mainApi });
+popupLogin.getDependencies({ header, storage, popupRegistration, validation, mainApi });
+popupRegistration.getDependencies({ popupLogin, popupSuccess, validation, mainApi });
+popupSuccess.getDependencies({ popupLogin });
+search.getDependencies({ validation, newsApi, preloader, notFound, articles, storage });
+articles.getDependencies({ article, storage, page });
+article.getDependencies({
+  storage,
+  article,
+  mainApi,
+  MONTHS,
+  getDataFoundArticles,
+  conversionDate,
+  removeUnnecessaryTags
+});
+newsApi.getDependencies({ getDateAgo });
 
-function checkFormReg() {
-  // eslint-disable-next-line no-bitwise
-  if (inputEmailReg.validity.valid && inputPasswordReg.validity.valid & inputNamReg.validity.valid) {
-    buttonReg.removeAttribute('disabled', false);
-  }
-}
-
-function registration(event) {
-  event.preventDefault();
-  popupSuccess.classList.add('popup_is-opened');
-  closePopupReg();
-}
-
-function openLoginCloseReg() {
-  closePopupReg();
-  openPopupLogin();
-}
-
-// functions popup success
-function closeSuccess() {
-  popupSuccess.classList.remove('popup_is-opened');
-}
-
-function openLoginCloseSuccess() {
-  closeSuccess();
-  openPopupLogin();
-}
-
-// functions search
-function showArticles(event) {
-  event.preventDefault();
-  articlesList.classList.add('articles_is-opened');
-}
-
-// listeners header
-buttonOpenLogin.addEventListener('click', openPopupLogin);
-buttonOpenMenu.addEventListener('click', openMenu);
-buttonCloseMenuHeadr.addEventListener('click', closeMenu);
-buttonLogout.addEventListener('click', logout);
-
-// listeners popup login
-buttonCloseLogin.addEventListener('click', closePopupLogin);
-buttonLoginOpenReg.addEventListener('click', openRegCloseLogin);
-formLogin.addEventListener('input', checkFormLogin);
-buttonLogin.addEventListener('click', login);
-
-// listeners popup reg
-buttonCloseReg.addEventListener('click', closePopupReg);
-buttonReg.addEventListener('click', registration);
-formReg.addEventListener('input', checkFormReg);
-buttonRegOpenLogin.addEventListener('click', openLoginCloseReg)
-
-// listeners popup success
-buttonCloseSuccess.addEventListener('click', closeSuccess);
-buttonSuccess.addEventListener('click', openLoginCloseSuccess);
-
-// listeners search
-buttonSearch.addEventListener('click', showArticles);
-
+page.fillPage();

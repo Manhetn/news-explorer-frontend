@@ -1,10 +1,11 @@
 @import url(./__title/information__title.css);
-@import url(./__article-counter/information__article-counter.css);
+/* @import url(./__article-counter/information__article-counter.css); */
 @import url(./__detals/information__detals.css);
+@import url(./__text/information__text.css);
 
 .information {
-  width: 100%;
-  margin: 0px;
+  max-width: 1440px;
+  margin: 0px auto;
   padding-top: 105px;
   padding-bottom: 38px;
   padding-left: 104px;
@@ -26,6 +27,6 @@
   .information {
     padding-top: calc( (100vw - 320px)/(767 - 320) * (75 - 55) + 55px);
     padding-bottom: calc( (100vw - 768px)/(1439 - 768) * (18 - 14) + 14px);
-    padding-left: calc( (100vw - 320px)/(767 - 320) * (30 - 0) + 0px); 
+    padding-left: calc( (100vw - 320px)/(767 - 320) * (30 - 0) + 0px);
   }
 }
