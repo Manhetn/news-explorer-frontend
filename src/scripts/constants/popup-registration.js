@@ -59,7 +59,7 @@ const POPUP_REGISTRATION_CONTENT = `<div class="popup__container popup__containe
                                           <button
                                             class="popup__button popup__button_type_reg button form__button"
                                             type="submit"
-
+                                            disabled
                                           >
                                           Зарегистрироваться
                                           </button>
